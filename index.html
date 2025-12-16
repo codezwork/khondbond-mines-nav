@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" class="full-viewport-map">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Khondbond Iron Mines - Enhanced Navigation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-measure@3.1.0/dist/leaflet-measure.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.72.0/dist/L.Control.Locate.min.css" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cpath fill='%230fd1eb' d='M21.6 6.2426v1.4427c0 .5306-.4029.9607-.9.9607h-5.4c-.4971 0-.9-.4301-.9-.9607V6.2426C5.4042 6.9678 0 10.046 0 8.634 0 7.1676 8.9061 1.9125 16.2 1.0739V.9607C16.2.4301 16.6029 0 17.1 0h1.8c.4971 0 .9.4301.9.9607v.1125C27.0939 1.9125 36 7.1676 36 8.634c0 1.412-5.4042-1.6662-14.4-2.3914zM16.5 10h3c.5523 0 1 .4477 1 1v20.5C20.5 32.8807 19.3807 34 18 34s-2.5-1.1193-2.5-2.5V11c0-.5523.4477-1 1-1z'/%3E%3C/svg%3E">
+</head>
+<body>
+    
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none;">
+            <h2>Khondbond Iron Mines</h2>
+            </a>
+        </div>
+        <nav>
+            <div class="nav-links">
+                <a href="index.html">Mine Navigation</a>
+                <a href="contact.html">Important Contacts</a>
+            </div>
+            <a href="contact.html" class="mobile-direct-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0;">
+                    <path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="currentColor"/>
+                </svg>
+                Contacts
+            </a>
+        </nav>
+    </header>
+
+    <!-- Search Bar Section -->
+    <div class="search-bar-container" id="searchBarContainer">
+        <div class="search-pill">
+            <div class="search-icons">
+                <!-- In navigation-new.html, replace the mic-btn section: -->
+                <button class="search-icon-btn info-btn" title="Mine Overview PDF" id="infoBtn">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V11H13V17ZM13 9H11V7H13V9Z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enhanced Map Section - Full Viewport -->
+    <div id="map-fullscreen">
+        <div id="enhanced-map"></div>
+        
+        <!-- Floating Action Buttons -->
+        <div class="fab-container">
+            <button class="fab layers-fab" id="layers-fab" title="Map Layers">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button class="fab location-fab" id="location-fab" title="My Location">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="currentColor"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Bottom Sheet Drawer -->
+    <div class="bottom-sheet" id="bottomSheet">
+        <div class="bottom-sheet-handle" id="bottomSheetHandle">
+            <div class="handle-bar"></div>
+        </div>
+        <div class="bottom-sheet-content">
+            <!-- Collapsed State -->
+            <div class="bottom-sheet-collapsed" id="collapsedContent">
+                <div class="sheet-header">
+                    <h3>Key Mine Locations</h3>
+                    <p>Tap to see available mine locations</p>
+                </div>
+            </div>
+            
+            <!-- Expanded State -->
+            <div class="bottom-sheet-expanded" id="expandedContent" style="display: none;">
+                <div class="expanded-header">
+                    <h3>Key Mine Locations</h3>
+                    <p>Select a location to view on map</p>
+                </div>
+                <div class="locations-carousel" id="locationsCarousel">
+                    <!-- Location cards will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PDF Modal Popup -->
+    <div class="pdf-modal" id="pdfModal">
+        <div class="pdf-modal-content">
+            <div class="pdf-modal-header">
+                <h3>Khondbond Iron Mines Overview</h3>
+                <button class="pdf-modal-close" id="pdfModalClose">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="pdf-viewer-container">
+                <iframe 
+                    src="KIMM.pdf#view=FitH&toolbar=0&navpanes=0&scrollbar=0&statusbar=0&messages=0" 
+                    class="pdf-viewer" 
+                    id="pdfViewer"
+                    title="Khondbond Iron Mines Overview PDF"
+                    loading="lazy"
+                    frameborder="0"
+                    scrolling="no"
+                >
+                    Your browser does not support PDFs. 
+                    <a href="khondbond-overview.pdf">Download the PDF</a> instead.
+                </iframe>
+            </div>
+            <!-- In navigation-new.html, update the PDF modal controls section: -->
+            <div class="pdf-controls">
+                <div class="pdf-controls-left">
+                    <button class="pdf-control-btn" id="pdfZoomOut" title="Zoom Out">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 13H5V11H19V13Z" fill="currentColor"/>
+                        </svg>
+                        Zoom Out
+                    </button>
+                    <button class="pdf-control-btn" id="pdfZoomIn" title="Zoom In">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z" fill="currentColor"/>
+                        </svg>
+                        Zoom In
+                    </button>
+                </div>
+                <div class="pdf-controls-right">
+                    <button class="pdf-control-btn pdf-download-btn" id="pdfDownload" title="Save PDF">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9H15V3H9V9H5L12 16L19 9ZM5 18V20H19V18H5Z" fill="currentColor"/>
+                        </svg>
+                        Save
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="https://unpkg.com/leaflet-measure@3.1.0/dist/leaflet-measure.js"></script>
+    <script src="https://unpkg.com/leaflet-omnivore@0.3.4/leaflet-omnivore.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.72.0/dist/L.Control.Locate.min.js"></script>
+    
+    <!-- Your custom scripts -->
+    <script src="script.js"></script>
+    <script src="enhanced-map.js"></script>
+    <script src="navigation.js"></script>
+</body>
+</html>

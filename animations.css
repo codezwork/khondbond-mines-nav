@@ -1,0 +1,306 @@
+/* animations.css */
+/* Subtle animations for enhanced visual appeal */
+
+/* ===== ENTRANCE ANIMATIONS ===== */
+
+/* Fade-in up animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Scale-in animation */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Slide-in from left */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Slide-in from right */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Float animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* ===== APPLIED ANIMATIONS ===== */
+
+/* Hero content entrance */
+.hero-content {
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.hero-content h1 {
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.hero-content p {
+    animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+.hero-content .cta-button {
+    animation: fadeInUp 0.8s ease-out 0.8s both;
+}
+
+/* Feature cards */
+.feature-card {
+    animation: scaleIn 0.6s ease-out both;
+    animation-delay: calc(var(--card-index, 0) * 0.1s + 0.2s);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Feature icons float animation */
+.feature-icon {
+    animation: float 3s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    animation: pulse 0.5s ease;
+    transform: scale(1.1);
+}
+
+/* PDF container animation */
+.hero-pdf {
+    animation: fadeIn 0.8s ease-out 0.3s both;
+}
+
+/* Email form */
+.email-signup-content {
+    animation: fadeInUp 0.8s ease-out both;
+}
+
+.email-form {
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+/* Form inputs focus effect */
+.email-input {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+}
+
+.email-input:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* CTA buttons hover effect */
+.cta-button, .feature-button, .location-button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-button::after, .feature-button::after, .location-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.cta-button:hover::after, .feature-button:hover::after, .location-button:hover::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(20, 20);
+        opacity: 0;
+    }
+}
+
+/* Contact cards */
+.contact-item {
+    animation: fadeInUp 0.6s ease-out both;
+    animation-delay: calc(var(--item-index, 0) * 0.05s);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-item:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+
+.contact-phone {
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.contact-phone::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    transition: width 0.3s ease;
+}
+
+.contact-item:hover .contact-phone::after {
+    width: 100%;
+}
+
+/* Location cards */
+.location-card {
+    animation: fadeInUp 0.6s ease-out both;
+    animation-delay: calc(var(--card-index, 0) * 0.1s);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.location-card:hover {
+    transform: translateY(-8px) scale(1.03);
+}
+
+.location-icon {
+    animation: float 4s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.location-card:hover .location-icon {
+    animation: pulse 0.5s ease;
+    transform: scale(1.1);
+}
+
+/* Map container */
+.map-container {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Legend items */
+.legend-item {
+    animation: fadeInUp 0.5s ease-out both;
+    animation-delay: calc(var(--item-index, 0) * 0.1s);
+}
+
+/* Section headers */
+.section-header {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.section-header h1, .section-header h2 {
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.section-header p {
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+/* ===== STAGGERED ANIMATIONS ===== */
+
+/* Stagger children animations */
+.stagger-children > * {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* ===== SCROLL REVEAL ANIMATIONS ===== */
+
+/* Elements with this class will animate when they come into view */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== PREFERS REDUCED MOTION ===== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ===== SMOOTH SCROLL BEHAVIOR ===== */
+
+html {
+    scroll-behavior: smooth;
+}
