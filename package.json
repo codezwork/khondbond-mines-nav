@@ -1,0 +1,20 @@
+{
+  "name": "khondbond-iron-mines",
+  "version": "1.0.0",
+  "description": "Digital guide to navigating Khondbond Iron Mines facility",
+  "main": "index.html",
+  "scripts": {
+    "dev": "serve public",
+    "build": "echo 'No build step required for static site'",
+    "start": "serve public"
+  },
+  "keywords": ["mine", "navigation", "map", "khondbond"],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
