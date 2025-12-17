@@ -105,39 +105,22 @@ function adjustZoomControlPosition() {
 function initBottomSheet() {
     const bottomSheet = document.getElementById('bottomSheet');
     const bottomSheetHandle = document.getElementById('bottomSheetHandle');
-    const sheetChevronBtn = document.getElementById('sheetChevronBtn');
     const collapsedContent = document.getElementById('collapsedContent');
     const expandedContent = document.getElementById('expandedContent');
     
     if (!bottomSheet || !bottomSheetHandle) return;
     
-    // Toggle expanded state on handle click (except chevron button)
+    // Toggle expanded state on handle click
     bottomSheetHandle.addEventListener('click', function(e) {
-        // Don't trigger if clicking on the chevron button
-        if (e.target.closest('.sheet-chevron-btn')) {
-            return;
-        }
         e.stopPropagation();
         toggleBottomSheet();
     });
-    
-    // Chevron button click handler
-    if (sheetChevronBtn) {
-        sheetChevronBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            toggleBottomSheet();
-        });
-    }
-    
-    // Rest of the existing bottom sheet code remains the same...
-    // (Close on click outside, swipe support, etc.)
     
     // Close on click outside (when expanded)
     document.addEventListener('click', function(e) {
         if (bottomSheet.classList.contains('expanded') && 
             !bottomSheet.contains(e.target) && 
-            e.target !== bottomSheetHandle &&
-            !e.target.closest('.sheet-chevron-btn')) {
+            e.target !== bottomSheetHandle) {
             collapseBottomSheet();
         }
     });
