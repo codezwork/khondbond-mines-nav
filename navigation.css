@@ -301,6 +301,7 @@ body.full-viewport-map header {
     transform: translateY(calc(100% - 100px));
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     min-height: 150px;
+    max-height: 80vh;
     overflow: hidden;
     touch-action: pan-y;
 }
