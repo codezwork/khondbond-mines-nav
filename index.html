@@ -76,26 +76,21 @@
     <!-- Bottom Sheet Drawer -->
     <div class="bottom-sheet" id="bottomSheet">
         <div class="bottom-sheet-handle" id="bottomSheetHandle">
-            <div class="sheet-header">
-                <h3>Key Mine Locations</h3>
-                <p>Tap to see available mine locations</p>
-            </div>
-            <button class="sheet-chevron-btn" id="sheetChevronBtn" title="Toggle locations">
-                <!-- Chevron Up SVG -->
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.41 15.41L12 10.83L16.59 15.41L18 14L12 8L6 14L7.41 15.41Z" fill="currentColor"/>
-                </svg>
-            </button>
+            <div class="handle-bar"></div>
         </div>
         <div class="bottom-sheet-content">
             <!-- Collapsed State -->
             <div class="bottom-sheet-collapsed" id="collapsedContent">
-                <!-- Content hidden when expanded -->
+                <div class="sheet-header">
+                    <h3>Key Mine Locations</h3>
+                    <p>Tap to see available mine locations</p>
+                </div>
             </div>
             
             <!-- Expanded State -->
             <div class="bottom-sheet-expanded" id="expandedContent" style="display: none;">
                 <div class="expanded-header">
+                    <h3>Key Mine Locations</h3>
                     <p>Select a location to view on map</p>
                 </div>
                 <div class="locations-carousel" id="locationsCarousel">
@@ -104,7 +99,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- PDF Modal Popup -->
     <div class="pdf-modal" id="pdfModal">
         <div class="pdf-modal-content">
