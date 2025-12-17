@@ -5,10 +5,16 @@
 const contactData = {
     "Departments": [
         {
-            "name": "Kanuri Appala Raju",
-            "phone": "+919040083952",
-            "displayPhone": "+91-904-008-3952",
-            "description": "Head (Logistics), Khondbond"
+            "name": "Gedela V Satyanarayana",
+            "phone": "+917763807795",
+            "displayPhone": "+91-776-380-7795",
+            "description": "Chief Khondbond"
+        },
+        {
+            "name": "Rajesh Kumar",
+            "phone": "+917033094900",
+            "displayPhone": "+91-703-309-4900",
+            "description": "Head (Mining Operations)"
         },
         {
             "name": "Garav Vikram Singh",
@@ -17,10 +23,16 @@ const contactData = {
             "description": "Head Equipment Maintenance"
         },
         {
-            "name": "Gedela V Satyanarayana",
-            "phone": "+917763807795",
-            "displayPhone": "+91-776-380-7795",
-            "description": "Chief Khondbond"
+            "name": "Vijay Shankar",
+            "phone": "+919040083963",
+            "displayPhone": "+91-904-008-3963",
+            "description": "Head Wet Processing O&M Khondbond"
+        },
+        {
+            "name": "Kanuri Appala Raju",
+            "phone": "+919040083952",
+            "displayPhone": "+91-904-008-3952",
+            "description": "Head (Logistics), Khondbond"
         },
         {
             "name": "Anuj Kumar",
@@ -45,18 +57,6 @@ const contactData = {
             "phone": "+919031052966",
             "displayPhone": "+91-903-105-2966",
             "description": "Area Manager (Operation) Shift"
-        },
-        {
-            "name": "Vijay Shankar",
-            "phone": "+919040083963",
-            "displayPhone": "+91-904-008-3963",
-            "description": "Head Wet Processing O&M Khondbond"
-        },
-        {
-            "name": "Rajesh Kumar",
-            "phone": "+917033094900",
-            "displayPhone": "+91-703-309-4900",
-            "description": "Head (Mining Operations)"
         },
         {
             "name": "Ranjan Kumar Patra",
