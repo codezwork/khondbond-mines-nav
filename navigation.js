@@ -297,8 +297,8 @@ function loadDefaultLocationsSpeechBubble() {
         {
             name: "Twin Chowk",
             description: "Main intersection and access point",
-            latitude: 21.9410,
-            longitude: 85.3820,
+            latitude: 21.9440,
+            longitude: 85.3845,
             icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"/>
             </svg>`
@@ -306,8 +306,8 @@ function loadDefaultLocationsSpeechBubble() {
         {
             name: "WTP Area",
             description: "Water Treatment Plant and storage",
-            latitude: 21.9400,
-            longitude: 85.3840,
+            latitude: 21.9253,
+            longitude: 85.3799,
             icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z"/>
             </svg>`
