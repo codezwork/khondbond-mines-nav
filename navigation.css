@@ -204,18 +204,13 @@ body.full-viewport-map header {
 .fab-container {
     position: absolute;
     right: var(--space-16);
-    bottom: calc(100px + var(--space-16));
+    bottom: var(--space-16);
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     gap: var(--space-16);
     z-index: 900;
     pointer-events: none;
-}
-
-@media (max-width:768px) {
-    .location-fab {
-        margin-bottom: 70px;
-    }
 }
 
 .fab-container * {
@@ -284,211 +279,6 @@ body.full-viewport-map header {
     border: 1px solid var(--color-border);
 }
 
-/* ============================================
-   BOTTOM SHEET DRAWER
-   ============================================ */
-
-.bottom-sheet {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1000;
-    background: var(--color-surface);
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
-    transform: translateY(calc(100% - 100px));
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    min-height: 150px;
-    max-height: 80vh;
-    overflow: hidden;
-    touch-action: pan-y;
-}
-
-.bottom-sheet.expanded {
-    transform: translateY(0);
-}
-
-.bottom-sheet-handle {
-    padding: var(--space-16) 0 var(--space-8);
-    cursor: grab;
-    user-select: none;
-    touch-action: none;
-}
-
-.bottom-sheet-handle:active {
-    cursor: grabbing;
-}
-
-.handle-bar {
-    width: 40px;
-    height: 4px;
-    background: var(--color-border);
-    border-radius: 2px;
-    margin: 0 auto;
-    transition: all var(--duration-fast) var(--ease-standard);
-}
-
-.bottom-sheet-handle:hover .handle-bar {
-    background: var(--color-text-secondary);
-    transform: scaleX(1.2);
-}
-
-.bottom-sheet-content {
-    padding: 0 var(--space-16) var(--space-16);
-    max-height: calc(80vh - 60px);
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-}
-
-/* Collapsed State */
-.bottom-sheet-collapsed {
-    padding: var(--space-8) 0;
-}
-
-.sheet-header h3 {
-    font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-semibold);
-    color: var(--color-text);
-    margin: 0 0 var(--space-4);
-}
-
-.sheet-header p {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-secondary);
-    margin: 0;
-}
-
-/* Expanded State */
-.bottom-sheet-expanded {
-    animation: fadeIn 0.3s ease-out;
-}
-
-.expanded-header {
-    margin-bottom: var(--space-24);
-    padding-bottom: var(--space-16);
-    border-bottom: 1px solid var(--color-border);
-}
-
-.expanded-header h3 {
-    font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-bold);
-    color: var(--color-text);
-    margin: 0 0 var(--space-8);
-}
-
-.expanded-header p {
-    font-size: var(--font-size-base);
-    color: var(--color-text-secondary);
-    margin: 0;
-}
-
-/* Locations Carousel */
-.locations-carousel {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: var(--space-16);
-    padding-bottom: var(--space-16);
-}
-
-/* Location Card in Carousel */
-.location-card-carousel {
-    background: var(--color-background);
-    border-radius: var(--radius-lg);
-    padding: var(--space-20);
-    border: 1px solid var(--color-border);
-    cursor: pointer;
-    transition: all var(--duration-normal) var(--ease-standard);
-    position: relative;
-    overflow: hidden;
-    animation:  0.5s ease-out forwards;
-    opacity: 1;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.location-card-carousel:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--color-primary);
-}
-
-.location-card-carousel::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: var(--color-primary);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.location-card-carousel:hover::before {
-    transform: scaleX(1);
-}
-
-.location-icon-carousel {
-    width: 60px;
-    height: 60px;
-    border-radius: var(--radius-full);
-    background: var(--color-primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: var(--space-16);
-    color: var(--color-btn-primary-text);
-    font-size: var(--font-size-2xl);
-    transition: all var(--duration-normal) var(--ease-standard);
-}
-
-.location-card-carousel h4 {
-    font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-semibold);
-    color: var(--color-text);
-    margin: 0 0 var(--space-8);
-    line-height: var(--line-height-tight);
-}
-
-.location-card-carousel p {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-secondary);
-    line-height: var(--line-height-normal);
-    margin: 0 0 var(--space-16);
-}
-
-.location-button-carousel {
-    background: var(--color-primary);
-    color: var(--color-btn-primary-text);
-    border: none;
-    padding: var(--space-8) var(--space-16);
-    border-radius: var(--radius-base);
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-medium);
-    cursor: pointer;
-    transition: all var(--duration-normal) var(--ease-standard);
-    width: 100%;
-}
-
-.location-button-carousel:hover {
-    background: var(--color-primary-hover);
-    transform: translateY(-1px);
-}
-
-.location-button-carousel:active {
-    transform: translateY(0);
-}
 
 /* ============================================
    LAYERS PANEL MODAL
@@ -1371,4 +1161,428 @@ body.full-viewport-map header {
 
 .mobile-direct-link {
     animation: slideInRightMobile 0.3s var(--ease-standard) 0.2s both;
+}
+
+/* Add this to the FLOATING ACTION BUTTONS section, after the existing FAB styles */
+
+/* ============================================
+   TOP-LEFT KEY LOCATIONS FAB
+   ============================================ */
+
+.top-left-fab-container {
+    position: absolute;
+    left: var(--space-32);
+    top: 160px; /* Position below search bar */
+    z-index: 900;
+    pointer-events: none;
+    margin-left: 28px;
+}
+
+@media (max-width: 768px) {
+    .top-left-fab-container{
+        margin-left: 18px;
+    }
+}
+
+.top-left-fab-container * {
+    pointer-events: auto;
+}
+
+.key-locations-fab {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--duration-normal) var(--ease-standard);
+    position: relative;
+    overflow: hidden;
+}
+
+.key-locations-fab:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    background: var(--color-primary);
+}
+
+.key-locations-fab:hover svg {
+    color: var(--color-btn-primary-text);
+}
+
+.key-locations-fab:active {
+    transform: translateY(0);
+}
+
+.key-locations-fab svg {
+    width: 24px;
+    height: 24px;
+    color: var(--color-primary);
+    transition: color var(--duration-normal) var(--ease-standard);
+}
+
+/* Update the speech bubble CSS section to fix cutting issue */
+
+/* Speech bubble overlay - Updated for two-column grid with proper scrolling */
+.speech-bubble-overlay {
+    position: absolute;
+    top: 230px; /* Position below the FAB */
+    left: var(--space-16);
+    z-index: 901;
+    display: none;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.speech-bubble-overlay.active {
+    display: block;
+}
+
+.speech-bubble-content {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--color-border);
+    min-width: 340px; /* Increased for two columns */
+    max-width: 420px;
+    max-height: 70vh;
+    min-height: 200px; /* Ensure minimum height */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.speech-bubble-arrow {
+    position: absolute;
+    top: -10px;
+    left: 70px;
+    width: 20px;
+    height: 20px;
+    background: var(--color-surface);
+    border-left: 1px solid var(--color-border);
+    border-top: 1px solid var(--color-border);
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.speech-bubble-header {
+    padding: var(--space-24) var(--space-24) var(--space-16);
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-surface);
+    z-index: 2;
+    position: relative;
+    flex-shrink: 0; /* Prevent header from shrinking */
+}
+
+.speech-bubble-header h3 {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    margin: 0 0 var(--space-8);
+}
+
+.speech-bubble-header p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+.locations-carousel-speech {
+    padding: var(--space-16) var(--space-24) var(--space-24);
+    flex: 1; /* Take remaining space */
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: var(--space-12);
+    grid-auto-rows: minmax(160px, auto); /* Ensure minimum row height */
+    align-content: start; /* Align items to start */
+}
+
+/* Location cards for speech bubble - Updated for compact grid */
+.location-card-speech {
+    background: var(--color-background);
+    border-radius: var(--radius-md);
+    padding: var(--space-12);
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+    transition: all var(--duration-normal) var(--ease-standard);
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 0.5s ease-out forwards;
+    display: flex;
+    flex-direction: column;
+    min-height: 160px; /* Set minimum height for consistency */
+    height: 100%; /* Take full height of grid cell */
+    box-sizing: border-box; /* Include padding in height */
+}
+
+.location-card-speech:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+}
+
+.location-card-speech::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--color-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.location-card-speech:hover::before {
+    transform: scaleX(1);
+}
+
+.location-icon-speech {
+    width: 36px; /* Smaller icon */
+    height: 36px;
+    border-radius: var(--radius-full);
+    background: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-8);
+    color: var(--color-btn-primary-text);
+    font-size: var(--font-size-lg);
+    transition: all var(--duration-normal) var(--ease-standard);
+    flex-shrink: 0;
+}
+
+.location-card-speech h4 {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    margin: 0 0 var(--space-6);
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.location-card-speech p {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+    margin: 0 0 var(--space-8);
+    flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.location-button-speech {
+    background: var(--color-primary);
+    color: var(--color-btn-primary-text);
+    border: none;
+    padding: var(--space-6) var(--space-12);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    transition: all var(--duration-normal) var(--ease-standard);
+    width: 100%;
+    margin-top: auto; /* Push button to bottom */
+}
+
+.location-button-speech:hover {
+    background: var(--color-primary-hover);
+    transform: translateY(-1px);
+}
+
+.location-button-speech:active {
+    transform: translateY(0);
+}
+
+/* Ensure the speech bubble content has proper scrolling */
+.locations-carousel-speech {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border) transparent;
+}
+
+.locations-carousel-speech::-webkit-scrollbar {
+    width: 6px;
+}
+
+.locations-carousel-speech::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: var(--radius-sm);
+}
+
+.locations-carousel-speech::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: var(--radius-sm);
+    transition: background var(--duration-normal) var(--ease-standard);
+}
+
+.locations-carousel-speech::-webkit-scrollbar-thumb:hover {
+    background: var(--color-text-secondary);
+}
+
+/* Desktop optimizations */
+@media (min-width: 769px) {
+    .top-left-fab-container {
+        left: var(--space-24);
+        top: 170px;
+    }
+    
+    .speech-bubble-overlay {
+        top: 240px;
+        left: var(--space-24);
+    }
+    
+    .speech-bubble-content {
+        min-width: 360px;
+        max-width: 450px;
+    }
+    
+    .speech-bubble-arrow {
+        left: 60px;
+    }
+    
+    .locations-carousel-speech {
+        grid-template-columns: repeat(2, 1fr); /* Maintain 2 columns */
+        gap: var(--space-16);
+        padding: var(--space-16) var(--space-20) var(--space-20);
+        grid-auto-rows: minmax(170px, auto);
+    }
+    
+    .location-card-speech {
+        padding: var(--space-16);
+        min-height: 170px;
+    }
+}
+
+/* Mobile optimizations - Maintain 2 columns even on mobile */
+@media (max-width: 768px) {
+    .top-left-fab-container {
+        left: var(--space-12);
+        top: 140px;
+    }
+    
+    .key-locations-fab {
+        width: 52px;
+        height: 52px;
+    }
+    
+    .key-locations-fab svg {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .speech-bubble-overlay {
+        top: 200px;
+        left: var(--space-12);
+        right: var(--space-12);
+        bottom: var(--space-12); /* Add bottom spacing */
+    }
+    
+    .speech-bubble-content {
+        min-width: 300px;
+        width: calc(100vw - 48px);
+        max-width: 400px;
+        max-height: 60vh;
+        min-height: 180px;
+    }
+    
+    .speech-bubble-arrow {
+        left: 50px;
+    }
+    
+    .speech-bubble-header {
+        padding: var(--space-20) var(--space-20) var(--space-12);
+    }
+    
+    .speech-bubble-header h3 {
+        font-size: var(--font-size-base);
+    }
+    
+    .speech-bubble-header p {
+        font-size: var(--font-size-xs);
+    }
+    
+    .locations-carousel-speech {
+        grid-template-columns: repeat(2, 1fr); /* Still 2 columns on mobile */
+        gap: var(--space-10);
+        padding: var(--space-12) var(--space-16) var(--space-16);
+        grid-auto-rows: minmax(150px, auto);
+    }
+    
+    .location-card-speech {
+        padding: var(--space-10);
+        min-height: 150px;
+        height: 100%; /* Ensure full height */
+    }
+
+    .location-icon-speech{
+        height: 24px;
+        width: 24px;
+    }
+    
+    /* Fix for mobile scrolling - ensure content is fully visible */
+    .speech-bubble-content {
+        max-height: calc(100vh - 220px); /* Account for FAB and top spacing */
+    }
+}
+
+/* For very small mobile screens, adjust grid gap */
+@media (max-width: 480px) {
+    .speech-bubble-content {
+        min-width: 280px;
+        max-height: calc(100vh - 300px); /* Adjust for smaller screens */
+    }
+    
+    .locations-carousel-speech {
+        gap: var(--space-8);
+        padding: var(--space-12) var(--space-12) var(--space-16);
+        grid-auto-rows: minmax(140px, auto);
+    }
+    
+    .location-card-speech {
+        padding: var(--space-8);
+        min-height: 140px;
+    }
+    
+    /* Ensure the last row is fully visible */
+    .speech-bubble-content {
+        margin-bottom: var(--space-8);
+    }
+}
+
+/* Add smooth scrolling for better mobile experience */
+.speech-bubble-content {
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Ensure cards don't overflow their containers */
+.location-card-speech > * {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Close on click outside */
+.overlay-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 899;
+    display: none;
+}
+
+.overlay-backdrop.active {
+    display: block;
 }
