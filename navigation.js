@@ -269,7 +269,7 @@ function loadDefaultLocationsSpeechBubble() {
         },
         {
             name: "G.E.M Complex",
-            description: "Geology, Equipment and Mining Office Complex",
+            description: "Geology, Equipment & Mining Office Complex",
             latitude: 21.9420,
             longitude: 85.3870,
             icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
