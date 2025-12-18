@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initNewNavigationLayout();
     
     // Set up bottom sheet interactions
-    initBottomSheet();
+    initSpeechBubble();
     
     // Set up FAB interactions
     initFABs();
@@ -102,141 +102,86 @@ function adjustZoomControlPosition() {
     }
 }
 
-function initBottomSheet() {
-    const bottomSheet = document.getElementById('bottomSheet');
-    const bottomSheetHandle = document.getElementById('bottomSheetHandle');
-    const collapsedContent = document.getElementById('collapsedContent');
-    const expandedContent = document.getElementById('expandedContent');
+// Replace the entire bottom-sheet related functions (lines 73-291) with this new code:
+
+// Remove all bottom-sheet initialization and replace with speech bubble
+function initSpeechBubble() {
+    const keyLocationsFab = document.getElementById('key-locations-fab');
+    const speechBubbleOverlay = document.getElementById('speechBubbleOverlay');
     
-    if (!bottomSheet || !bottomSheetHandle) return;
+    if (!keyLocationsFab || !speechBubbleOverlay) return;
     
-    // Toggle expanded state on handle click
-    bottomSheetHandle.addEventListener('click', function(e) {
+    // Create backdrop for closing on outside click
+    const backdrop = document.createElement('div');
+    backdrop.className = 'overlay-backdrop';
+    backdrop.id = 'overlayBackdrop';
+    document.body.appendChild(backdrop);
+    
+    // Toggle speech bubble on FAB click
+    keyLocationsFab.addEventListener('click', function(e) {
         e.stopPropagation();
-        toggleBottomSheet();
+        toggleSpeechBubble();
     });
     
-    // Close on click outside (when expanded)
-    document.addEventListener('click', function(e) {
-        if (bottomSheet.classList.contains('expanded') && 
-            !bottomSheet.contains(e.target) && 
-            e.target !== bottomSheetHandle) {
-            collapseBottomSheet();
-        }
-    });
+    // Close speech bubble when clicking outside
+    backdrop.addEventListener('click', closeSpeechBubble);
     
-    // Swipe support for mobile
-    let startY = 0;
-    let currentY = 0;
-    let isDragging = false;
-    
-    bottomSheetHandle.addEventListener('touchstart', function(e) {
-        startY = e.touches[0].clientY;
-        isDragging = true;
-        bottomSheet.style.transition = 'none';
-    });
-    
-    document.addEventListener('touchmove', function(e) {
-        if (!isDragging) return;
-        e.preventDefault();
-        
-        currentY = e.touches[0].clientY;
-        const diff = currentY - startY;
-        
-        // Only allow dragging upward when collapsed, downward when expanded
-        if (bottomSheet.classList.contains('expanded')) {
-            if (diff > 0) {
-                const translateY = Math.min(diff, 100);
-                bottomSheet.style.transform = `translateY(${translateY}px)`;
-            }
-        } else {
-            if (diff < 0) {
-                const translateY = Math.max(diff, -300);
-                bottomSheet.style.transform = `translateY(calc(100% - 100px + ${translateY}px))`;
-            }
-        }
-    });
-    
-    document.addEventListener('touchend', function(e) {
-        if (!isDragging) return;
-        isDragging = false;
-        bottomSheet.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
-        
-        const diff = currentY - startY;
-        const threshold = 50;
-        
-        if (bottomSheet.classList.contains('expanded')) {
-            if (diff > threshold) {
-                collapseBottomSheet();
-            } else {
-                expandBottomSheet();
-            }
-        } else {
-            if (diff < -threshold) {
-                expandBottomSheet();
-            } else {
-                collapseBottomSheet();
-            }
-        }
-    });
-    
-    // Load location cards when expanded
-    bottomSheet.addEventListener('transitionend', function() {
-        if (bottomSheet.classList.contains('expanded')) {
-            loadLocationCards();
+    // Load location cards when speech bubble opens
+    speechBubbleOverlay.addEventListener('transitionend', function() {
+        if (speechBubbleOverlay.classList.contains('active')) {
+            loadLocationCardsSpeechBubble();
         }
     });
 }
 
-function toggleBottomSheet() {
-    const bottomSheet = document.getElementById('bottomSheet');
-    const collapsedContent = document.getElementById('collapsedContent');
-    const expandedContent = document.getElementById('expandedContent');
+function toggleSpeechBubble() {
+    const speechBubbleOverlay = document.getElementById('speechBubbleOverlay');
+    const backdrop = document.getElementById('overlayBackdrop');
+    const keyLocationsFab = document.getElementById('key-locations-fab');
     
-    if (bottomSheet.classList.contains('expanded')) {
-        collapseBottomSheet();
+    if (speechBubbleOverlay.classList.contains('active')) {
+        closeSpeechBubble();
     } else {
-        expandBottomSheet();
+        openSpeechBubble();
     }
 }
 
-function expandBottomSheet() {
-    const bottomSheet = document.getElementById('bottomSheet');
-    const collapsedContent = document.getElementById('collapsedContent');
-    const expandedContent = document.getElementById('expandedContent');
+function openSpeechBubble() {
+    const speechBubbleOverlay = document.getElementById('speechBubbleOverlay');
+    const backdrop = document.getElementById('overlayBackdrop');
+    const keyLocationsFab = document.getElementById('key-locations-fab');
     
-    bottomSheet.classList.add('expanded');
-    if (collapsedContent) collapsedContent.style.display = 'none';
-    if (expandedContent) expandedContent.style.display = 'block';
+    speechBubbleOverlay.classList.add('active');
+    backdrop.classList.add('active');
+    keyLocationsFab.style.backgroundColor = 'var(--color-primary)';
+    keyLocationsFab.querySelector('svg').style.color = 'var(--color-btn-primary-text)';
     
-    // Update FAB position
-    updateFABPosition(true);
+    // Load location cards
+    loadLocationCardsSpeechBubble();
 }
 
-function collapseBottomSheet() {
-    const bottomSheet = document.getElementById('bottomSheet');
-    const collapsedContent = document.getElementById('collapsedContent');
-    const expandedContent = document.getElementById('expandedContent');
+function closeSpeechBubble() {
+    const speechBubbleOverlay = document.getElementById('speechBubbleOverlay');
+    const backdrop = document.getElementById('overlayBackdrop');
+    const keyLocationsFab = document.getElementById('key-locations-fab');
     
-    bottomSheet.classList.remove('expanded');
-    if (collapsedContent) collapsedContent.style.display = 'block';
-    if (expandedContent) expandedContent.style.display = 'none';
-    
-    // Update FAB position
-    updateFABPosition(false);
+    speechBubbleOverlay.classList.remove('active');
+    backdrop.classList.remove('active');
+    keyLocationsFab.style.backgroundColor = 'var(--color-surface)';
+    keyLocationsFab.querySelector('svg').style.color = 'var(--color-primary)';
 }
 
-function loadLocationCards() {
-    const carousel = document.getElementById('locationsCarousel');
+function loadLocationCardsSpeechBubble() {
+    const carousel = document.getElementById('locationsCarouselSpeech');
     if (!carousel) return;
     
     // Clear existing cards
     carousel.innerHTML = '';
     
-    // Check if locationData exists from navigation.js
+    // Check if locationData exists
     if (typeof locationData === 'undefined') {
         console.warn('locationData not found. Loading default locations.');
-        loadDefaultLocations();
+        loadDefaultLocationsSpeechBubble();
         return;
     }
     
@@ -248,7 +193,7 @@ function loadLocationCards() {
     
     // Create cards for each location with staggered animation
     allLocations.forEach((location, index) => {
-        const card = createLocationCard(location, index);
+        const card = createLocationCardSpeechBubble(location, index);
         carousel.appendChild(card);
         
         // Set animation delay for staggered entrance
@@ -257,31 +202,34 @@ function loadLocationCards() {
     
     // If no locations were loaded, show default
     if (carousel.children.length === 0) {
-        loadDefaultLocations();
+        loadDefaultLocationsSpeechBubble();
     }
 }
 
-function createLocationCard(location, index) {
+function createLocationCardSpeechBubble(location, index) {
     const card = document.createElement('div');
-    card.className = 'location-card-carousel';
+    card.className = 'location-card-speech';
+    
+    // Get icon from location data or use default
+    const icon = location.icon || getDefaultIcon(location);
     
     card.innerHTML = `
-        <div class="location-icon-carousel">
-            ${location.icon || getDefaultIcon(location)}
+        <div class="location-icon-speech">
+            ${icon}
         </div>
         <h4>${location.name}</h4>
         <p>${location.description || 'Mine location'}</p>
-        <button class="location-button-carousel" 
-                onclick="zoomToLocation(${location.latitude}, ${location.longitude});collapseBottomSheet()">
+        <button class="location-button-speech" 
+                onclick="zoomToLocation(${location.latitude}, ${location.longitude});closeSpeechBubble()">
             View on Map
         </button>
     `;
     
     // Add click event to entire card
     card.addEventListener('click', function(e) {
-        if (!e.target.classList.contains('location-button-carousel')) {
+        if (!e.target.classList.contains('location-button-speech')) {
             zoomToLocation(location.latitude, location.longitude);
-            collapseBottomSheet();
+            closeSpeechBubble();
         }
     });
     
@@ -291,32 +239,32 @@ function createLocationCard(location, index) {
 function getDefaultIcon(location) {
     // Return appropriate SVG based on location type
     if (location.name.includes('Administration') || location.name.includes('Admin')) {
-        return `<svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        return `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V5H19V19ZM7 10H9V17H7V10ZM11 7H13V17H11V7ZM15 13H17V17H15V13Z"/>
         </svg>`;
     } else if (location.name.includes('G.E.M')) {
-        return `<svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        return `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z"/>
         </svg>`;
     } else {
-        return `<svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        return `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"/>
         </svg>`;
     }
 }
 
-function loadDefaultLocations() {
-    const carousel = document.getElementById('locationsCarousel');
+function loadDefaultLocationsSpeechBubble() {
+    const carousel = document.getElementById('locationsCarouselSpeech');
     if (!carousel) return;
     
     const defaultLocations = [
         {
             name: "Admin Complex",
-            description: "Central Administration Offices and Management Center",
+            description: "Central Administration & Management Center",
             latitude: 21.9308,
             longitude: 85.3810,
-            icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V5H19V19ZM7 10H9V17H7V10ZM11 7H13V17H11V7ZM15 13H17V17H15V13Z"/>
+            icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20" height="15">
+            <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3 0 498.7 13.3 512 29.7 512h388.6c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304h-91.4z"/>
             </svg>`
         },
         {
@@ -324,23 +272,50 @@ function loadDefaultLocations() {
             description: "Geology, Equipment and Mining Office Complex",
             latitude: 21.9420,
             longitude: 85.3870,
-            icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z"/>
             </svg>`
         },
         {
             name: "CW Plant",
-            description: "Crushing and Washing Plant near Twin Chowk and GEM Complex",
+            description: "Crushing and Washing Plant",
             latitude: 21.9440,
             longitude: 85.3860,
-            icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V5H19V19ZM7 10H9V17H7V10ZM11 7H13V17H11V7ZM15 13H17V17H15V13Z"/>
+            icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="15" height="20">
+            <path d="M475.1 163.8L336 252.3V176c0-13.3-10.7-24-24-24-4.5 0-8.9 1.3-12.8 3.7L160 243.4V176c0-13.3-10.7-24-24-24-4.5 0-8.9 1.3-12.8 3.7L0 233.9V448c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V184c0-18.2-19.8-29.5-36.9-20.2zM64 448V283.9l96-60V448H64zm160 0V275.9l96-60V448h-96zm160 0V244.3l64-40.4V448h-64z"/>
+            </svg>`
+        },
+        {
+            name: "Security Control",
+            description: "Main mining excavation area",
+            latitude: 21.9320,
+            longitude: 85.3802,
+            icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="15" height="15">
+            <path d="M256 0c4.6 0 9.2.9 13.5 2.7l216 90c8.6 3.6 14.5 12 14.5 21.3 0 198.5-114.9 335.9-241.5 395.3-1.9.9-3.9 1.7-6 2.4-4.3 1.5-8.9 1.5-13.1 0-2.1-.7-4.1-1.5-6-2.4C126.9 449.9 12 312.5 12 114c0-9.3 5.9-17.7 14.5-21.3l216-90C246.8.9 251.4 0 256 0z"/>
+            </svg>`
+        },
+        {
+            name: "Twin Chowk",
+            description: "Main intersection and access point",
+            latitude: 21.9410,
+            longitude: 85.3820,
+            icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"/>
+            </svg>`
+        },
+        {
+            name: "WTP Area",
+            description: "Water Treatment Plant and storage",
+            latitude: 21.9400,
+            longitude: 85.3840,
+            icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z"/>
             </svg>`
         }
     ];
     
     defaultLocations.forEach((location, index) => {
-        const card = createLocationCard(location, index);
+        const card = createLocationCardSpeechBubble(location, index);
         carousel.appendChild(card);
         card.style.animationDelay = `${index * 0.1}s`;
     });
