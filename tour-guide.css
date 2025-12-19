@@ -1,0 +1,378 @@
+/* ============================================
+   TOUR GUIDE STYLES - SEPARATE FILE
+   ============================================ */
+
+/* Overlay and Backdrop */
+.tour-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s var(--ease-standard);
+}
+
+.tour-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.tour-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Element Highlighting */
+.tour-highlight {
+    position: relative;
+    z-index: 10001 !important;
+    animation: pulse-highlight 2s infinite;
+    box-shadow: 0 0 0 4px var(--color-primary), 
+                0 0 20px rgba(var(--color-primary-rgb, 33, 128, 141), 0.5) !important;
+    border-radius: var(--radius-base);
+}
+
+@keyframes pulse-highlight {
+    0%, 100% {
+        box-shadow: 0 0 0 4px var(--color-primary), 
+                    0 0 20px rgba(var(--color-primary-rgb, 33, 128, 141), 0.5);
+    }
+    50% {
+        box-shadow: 0 0 0 6px var(--color-primary), 
+                    0 0 30px rgba(var(--color-primary-rgb, 33, 128, 141), 0.8);
+    }
+}
+
+/* Speech Bubble */
+.tour-speech-bubble {
+    position: absolute;
+    z-index: 10002;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s var(--ease-standard);
+    width: 320px;
+    max-width: 90vw;
+}
+
+.tour-speech-bubble.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tour-speech-bubble-content {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    padding: var(--space-20);
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--color-border);
+    position: relative;
+}
+
+/* Speech Bubble Arrows */
+.tour-speech-bubble-arrow {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    z-index: 1;
+}
+
+.tour-speech-bubble-arrow.top {
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    border-right: none;
+    border-bottom: none;
+}
+
+.tour-speech-bubble-arrow.bottom {
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    border-left: none;
+    border-top: none;
+}
+
+.tour-speech-bubble-arrow.left {
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    border-right: none;
+    border-top: none;
+}
+
+.tour-speech-bubble-arrow.right {
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    border-left: none;
+    border-bottom: none;
+}
+
+.tour-speech-bubble-arrow.top-left {
+    top: -10px;
+    left: 20px;
+    transform: rotate(45deg);
+    border-right: none;
+    border-bottom: none;
+}
+
+.tour-speech-bubble-arrow.top-right {
+    top: -10px;
+    right: 20px;
+    transform: rotate(45deg);
+    border-left: none;
+    border-bottom: none;
+}
+
+.tour-speech-bubble-arrow.center {
+    display: none; /* Hide arrow for center messages */
+}
+
+/* Speech Bubble Content */
+.tour-speech-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-12);
+}
+
+.tour-speech-header h4 {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    margin: 0;
+}
+
+.tour-step-badge {
+    background: var(--color-primary);
+    color: var(--color-btn-primary-text);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    padding: var(--space-2) var(--space-8);
+    border-radius: var(--radius-full);
+}
+
+.tour-speech-bubble p {
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-normal);
+    margin: 0 0 var(--space-16);
+}
+
+.tour-speech-actions {
+    display: flex;
+    gap: var(--space-8);
+    justify-content: space-between;
+}
+
+.tour-speech-actions button {
+    background: var(--color-secondary);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    padding: var(--space-8) var(--space-12);
+    border-radius: var(--radius-base);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    transition: all var(--duration-fast) var(--ease-standard);
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.tour-speech-actions button:hover {
+    background: var(--color-secondary-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+.tour-speech-actions button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.tour-speech-skip {
+    background: var(--color-warning) !important;
+    color: var(--color-warning-text) !important;
+    border-color: var(--color-warning-border) !important;
+}
+
+.tour-speech-skip:hover {
+    background: var(--color-warning-hover) !important;
+}
+
+.tour-speech-next {
+    background: var(--color-primary) !important;
+    color: var(--color-btn-primary-text) !important;
+    border-color: var(--color-primary) !important;
+}
+
+.tour-speech-next:hover {
+    background: var(--color-primary-hover) !important;
+}
+
+/* Tour Controls */
+.tour-controls {
+    position: absolute;
+    bottom: var(--space-24);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-12);
+    z-index: 10003;
+}
+
+.tour-step-indicator {
+    background: var(--color-surface);
+    color: var(--color-text);
+    padding: var(--space-8) var(--space-16);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    box-shadow: var(--shadow-md);
+}
+
+/* Notification */
+.tour-notification {
+    position: fixed;
+    bottom: var(--space-24);
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--color-surface);
+    color: var(--color-text);
+    padding: var(--space-16) var(--space-24);
+    border-radius: var(--radius-base);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--color-border);
+    z-index: 10005;
+    opacity: 0;
+    transition: all 0.3s var(--ease-standard);
+    max-width: 90vw;
+    white-space: normal;
+    line-height: 1.4;
+}
+
+.tour-notification.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    .tour-speech-bubble {
+        width: 280px;
+        max-width: calc(100vw - 40px);
+    }
+    
+    .tour-speech-bubble-content {
+        padding: var(--space-16);
+    }
+    
+    .tour-speech-header h4 {
+        font-size: var(--font-size-base);
+    }
+    
+    .tour-speech-bubble p {
+        font-size: var(--font-size-sm);
+        line-height: 1.4;
+        margin-bottom: var(--space-12);
+    }
+    
+    .tour-speech-actions {
+        gap: var(--space-6);
+    }
+    
+    .tour-speech-actions button {
+        padding: var(--space-6) var(--space-8);
+        font-size: var(--font-size-xs);
+        min-height: 36px;
+    }
+    
+    .tour-controls {
+        bottom: var(--space-16);
+    }
+    
+    .tour-step-indicator {
+        font-size: var(--font-size-sm);
+        padding: var(--space-6) var(--space-12);
+    }
+    
+    /* Ensure highlighted elements are fully visible on mobile */
+    .tour-highlight {
+        box-shadow: 0 0 0 3px var(--color-primary), 
+                    0 0 15px rgba(var(--color-primary-rgb, 33, 128, 141), 0.6) !important;
+        margin: 2px; /* Add margin to ensure visibility */
+    }
+    
+    /* Position speech bubble to avoid overlap on mobile */
+    .tour-speech-bubble {
+        z-index: 10003; /* Ensure bubble is above highlight */
+    }
+    
+    .tour-notification {
+        padding: var(--space-12) var(--space-16);
+        font-size: var(--font-size-sm);
+        max-width: 95vw;
+        bottom: var(--space-16);
+    }
+    
+    .tour-close-btn {
+        top: var(--space-16);
+        right: var(--space-16);
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tour-speech-bubble {
+        width: 250px;
+    }
+    
+    .tour-speech-actions button {
+        font-size: var(--font-size-xs);
+        padding: var(--space-4) var(--space-6);
+    }
+    
+    .tour-step-indicator {
+        font-size: var(--font-size-xs);
+        padding: var(--space-4) var(--space-8);
+    }
+    
+    .tour-close-btn {
+        top: var(--space-12);
+        right: var(--space-12);
+        width: 32px;
+        height: 32px;
+    }
+    
+    .tour-close-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Accessibility: Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .tour-highlight,
+    .tour-speech-bubble,
+    .tour-notification,
+    .tour-close-btn {
+        animation: none !important;
+        transition: none !important;
+    }
+}
