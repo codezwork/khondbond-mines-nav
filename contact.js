@@ -36,8 +36,8 @@ const contactData = {
         },
         {
             "name": "Abhishek Singh",
-            "phone": "+918093754869",
-            "displayPhone": "+91-809-375-4869",
+            "phone": "+919262692183",
+            "displayPhone": "+91-926-269-2183",
             "description": "Area Manager Excavation"
         },
         {
