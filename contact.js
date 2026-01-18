@@ -35,22 +35,22 @@ const contactData = {
             "description": "Head (Logistics), Khondbond"
         },
         {
-            "name": "Anup Kumar Roy",
+            "name": "Abhishek Singh",
             "phone": "+918093754869",
             "displayPhone": "+91-809-375-4869",
-            "description": "Sr.Area Manager Excavation"
+            "description": "Area Manager Excavation"
         },
         {
             "name": "Jivitesh Kumar Anokhe",
             "phone": "+919031052966",
             "displayPhone": "+91-903-105-2966",
-            "description": "Area Manager Development & Services"
+            "description": "Area Manager (Safety)"
         },
         {
             "name": "Ranjan Kumar Patra",
             "phone": "+917064423745",
             "displayPhone": "+91-706-442-3745",
-            "description": "Sr.Area Manager (Safety)"
+            "description": "Sr.Area Manager (Drilling & Blasting)"
         },
         {
             "name": "Asit Kumar Nayak",
