@@ -361,3 +361,48 @@ if(infoBtn) {
         initPdfViewer();
     });
 }
+
+// --- PRELOAD LOGIC ---
+// Start fetching the PDF as soon as the script loads, 
+// but don't render it yet.
+
+let pdfLoadingTask = null; // Store the loading task globally
+
+// Check if we are on the main page
+if (document.getElementById('infoBtn')) {
+    // Start download immediately in background
+    pdfLoadingTask = pdfjsLib.getDocument(url);
+}
+
+// Update your initPdfViewer to use this existing task
+function initPdfViewer() {
+    const modal = document.getElementById('pdfModal');
+    const loader = document.getElementById('pdf-loader');
+    
+    modal.style.display = 'flex';
+    loader.style.display = 'block';
+
+    // Check if the preloading task exists
+    if (pdfLoadingTask) {
+        pdfLoadingTask.promise.then(function(pdfDoc_) {
+            // ... exact same logic as before ...
+            pdfDoc = pdfDoc_;
+            document.getElementById('page_count').textContent = pdfDoc.numPages;
+            
+            pdfDoc.getPage(1).then(function(page) {
+                const container = document.getElementById('pdfCanvasContainer');
+                const availableWidth = container.clientWidth - 40;
+                const viewportUnscaled = page.getViewport({scale: 1});
+                const newScale = availableWidth / viewportUnscaled.width;
+                scale = Math.min(Math.max(newScale, 0.5), 1.5);
+                
+                renderPage(pageNum).then(() => {
+                    loader.style.display = 'none';
+                });
+            });
+        }).catch(function(error) {
+             console.error('Error loading PDF:', error);
+             loader.innerHTML = '<p>Error loading PDF</p>';
+        });
+    }
+}
