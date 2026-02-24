@@ -46,17 +46,6 @@
       <outline>1</outline>
     </PolyStyle>
   </Style>
-  <Style id="area5">
-    <LineStyle>
-      <color>FF0000FF</color>
-      <width>1</width>
-    </LineStyle>
-    <PolyStyle>
-      <color>BF000000</color>
-      <fill>0</fill>
-      <outline>1</outline>
-    </PolyStyle>
-  </Style>
   <Style id="line1">
     <LineStyle>
       <color>FF00FF00</color>
@@ -64,387 +53,67 @@
     </LineStyle>
   </Style>
   <Style id="point1">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
+    <IconStyle><Icon><href>kml_ext_files/kml_symbol_lmv_route_khondbond_rv1_kmz_kml_symbol_no symbol_0_png_0.png</href></Icon></IconStyle>
     <LabelStyle><color>ff00ffff</color></LabelStyle>
   </Style>
   <Style id="point2">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
+    <IconStyle><Icon><href>kml_ext_files/kml_symbol_lmv_route_khondbond_rv1_kmz_kml_symbol_no symbol_0_png_0.png</href></Icon></IconStyle>
     <LabelStyle><color>ff00ffff</color></LabelStyle>
   </Style>
   <Style id="point3">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
+    <IconStyle><Icon><href>kml_ext_files/kml_symbol_lmv_route_khondbond_rv1_kmz_kml_symbol_no symbol_0_png_0.png</href></Icon></IconStyle>
     <LabelStyle><color>ff00ffff</color></LabelStyle>
   </Style>
   <Style id="point4">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
+    <IconStyle><Icon><href>kml_ext_files/kml_symbol_lmv_route_khondbond_rv1_kmz_kml_symbol_no symbol_0_png_0.png</href></Icon></IconStyle>
     <LabelStyle><color>ff00ffff</color></LabelStyle>
   </Style>
   <Style id="point5">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
+    <IconStyle><Icon><href>kml_ext_files/kml_symbol_lmv_route_khondbond_rv1_kmz_kml_symbol_no symbol_0_png_0.png</href></Icon></IconStyle>
     <LabelStyle><color>ff00ffff</color></LabelStyle>
   </Style>
   <Style id="point6">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
+    <IconStyle><Icon><href>kml_ext_files/kml_symbol_lmv_route_khondbond_rv1_kmz_kml_symbol_no symbol_0_png_0.png</href></Icon></IconStyle>
     <LabelStyle><color>ff00ffff</color></LabelStyle>
   </Style>
   <Style id="point7">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
+    <IconStyle><Icon><href>kml_ext_files/kml_symbol_lmv_route_khondbond_rv1_kmz_kml_symbol_no symbol_0_png_0.png</href></Icon></IconStyle>
     <LabelStyle><color>ff00ffff</color></LabelStyle>
   </Style>
   <Style id="point8">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
+    <IconStyle><Icon><href>kml_ext_files/kml_symbol_lmv_route_khondbond_rv1_kmz_kml_symbol_no symbol_0_png_0.png</href></Icon></IconStyle>
     <LabelStyle><color>ff00ffff</color></LabelStyle>
   </Style>
   <Style id="point9">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
+    <IconStyle><Icon><href>kml_ext_files/kml_symbol_lmv_route_khondbond_rv1_kmz_kml_symbol_no symbol_0_png_0.png</href></Icon></IconStyle>
     <LabelStyle><color>ff00ffff</color></LabelStyle>
   </Style>
   <Style id="point10">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
+    <IconStyle><Icon><href>kml_ext_files/kml_symbol_lmv_route_khondbond_rv1_kmz_kml_symbol_no symbol_0_png_0.png</href></Icon></IconStyle>
     <LabelStyle><color>ff00ffff</color></LabelStyle>
   </Style>
   <Style id="point11">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
+    <IconStyle><Icon><href>kml_ext_files/kml_symbol_lmv_route_khondbond_rv1_kmz_kml_symbol_no symbol_0_png_0.png</href></Icon></IconStyle>
     <LabelStyle><color>ff00ffff</color></LabelStyle>
   </Style>
   <Style id="point12">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
+    <IconStyle><Icon><href>kml_ext_files/kml_symbol_lmv_route_khondbond_rv1_kmz_kml_symbol_no symbol_0_png_0.png</href></Icon></IconStyle>
     <LabelStyle><color>ff00ffff</color></LabelStyle>
   </Style>
   <Style id="point13">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
+    <IconStyle><Icon><href>kml_ext_files/kml_symbol_lmv_route_khondbond_rv1_kmz_kml_symbol_no symbol_0_png_0.png</href></Icon></IconStyle>
     <LabelStyle><color>ff00ffff</color></LabelStyle>
   </Style>
   <Style id="point14">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
+    <IconStyle><Icon><href>kml_ext_files/kml_symbol_lmv_route_khondbond_rv1_kmz_kml_symbol_no symbol_0_png_0.png</href></Icon></IconStyle>
   </Style>
   <Style id="point15">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
+    <IconStyle><Icon><href>kml_ext_files/kml_symbol_lmv_route_khondbond_rv1_kmz_kml_symbol_no symbol_0_png_0.png</href></Icon></IconStyle>
+    <LabelStyle><color>ff00ffff</color></LabelStyle>
   </Style>
   <Style id="point16">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-  </Style>
-  <Style id="point17">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-  </Style>
-  <Style id="point18">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-  </Style>
-  <Style id="point19">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
+    <IconStyle><Icon><href>kml_ext_files/kml_symbol_lmv_route_khondbond_rv1_kmz_kml_symbol_no symbol_0_png_0.png</href></Icon></IconStyle>
     <LabelStyle><color>ff00ffff</color></LabelStyle>
-  </Style>
-  <Style id="point20">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff00ffff</color></LabelStyle>
-  </Style>
-  <Style id="point21">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point22">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point23">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point24">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point25">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point26">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point27">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point28">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point29">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point30">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point31">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point32">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point33">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point34">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point35">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point36">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point37">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point38">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point39">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point40">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point41">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point42">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point43">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point44">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point45">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point46">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point47">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point48">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point49">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point50">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point51">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point52">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point53">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point54">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point55">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point56">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point57">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point58">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point59">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point60">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point61">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point62">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point63">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point64">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point65">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point66">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point67">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point68">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point69">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point70">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point71">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point72">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point73">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point74">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point75">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point76">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point77">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point78">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point79">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point80">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point81">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point82">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point83">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point84">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point85">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point86">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point87">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point88">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point89">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point90">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point91">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point92">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point93">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point94">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point95">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point96">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
-  </Style>
-  <Style id="point97">
-    <IconStyle><Icon><href>kml_ext_files/kml_symbol_no symbol_0.png</href></Icon></IconStyle>
-    <LabelStyle><color>ff0000ff</color></LabelStyle>
   </Style>
   <Folder>
     <name>Point Features</name>
@@ -552,8 +221,7 @@ COMPLEX</name>
     </Placemark>
     <Placemark>
       <description>TEXT</description>
-      <name>ADMIN
-COMPLEX</name>
+      <name>ADMIN  COMPLEX</name>
       <styleUrl>#point11</styleUrl>
       <Point>
         <altitudeMode>clampToGround</altitudeMode>
@@ -594,7 +262,7 @@ COMPLEX</name>
     <Placemark>
       <description>0</description>
       <name>LMV ROAD</name>
-      <styleUrl>#point15</styleUrl>
+      <styleUrl>#point14</styleUrl>
       <Point>
         <altitudeMode>clampToGround</altitudeMode>
         <extrude>0</extrude>
@@ -604,7 +272,7 @@ COMPLEX</name>
     <Placemark>
       <description>0</description>
       <name>LMV ROAD</name>
-      <styleUrl>#point16</styleUrl>
+      <styleUrl>#point14</styleUrl>
       <Point>
         <altitudeMode>clampToGround</altitudeMode>
         <extrude>0</extrude>
@@ -614,7 +282,7 @@ COMPLEX</name>
     <Placemark>
       <description>0</description>
       <name>LMV ROAD</name>
-      <styleUrl>#point17</styleUrl>
+      <styleUrl>#point14</styleUrl>
       <Point>
         <altitudeMode>clampToGround</altitudeMode>
         <extrude>0</extrude>
@@ -624,7 +292,7 @@ COMPLEX</name>
     <Placemark>
       <description>0</description>
       <name>LMV ROAD</name>
-      <styleUrl>#point18</styleUrl>
+      <styleUrl>#point14</styleUrl>
       <Point>
         <altitudeMode>clampToGround</altitudeMode>
         <extrude>0</extrude>
@@ -634,7 +302,7 @@ COMPLEX</name>
     <Placemark>
       <description>TEXT</description>
       <name>P.B GATE</name>
-      <styleUrl>#point19</styleUrl>
+      <styleUrl>#point15</styleUrl>
       <Point>
         <altitudeMode>clampToGround</altitudeMode>
         <extrude>0</extrude>
@@ -644,783 +312,11 @@ COMPLEX</name>
     <Placemark>
       <description>TEXT</description>
       <name>Hathi Chowk</name>
-      <styleUrl>#point20</styleUrl>
+      <styleUrl>#point16</styleUrl>
       <Point>
         <altitudeMode>clampToGround</altitudeMode>
         <extrude>0</extrude>
         <coordinates>85.3835779003,21.9393459758,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>1</name>
-      <styleUrl>#point21</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3731804529,21.9152476361,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>2</name>
-      <styleUrl>#point22</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3749238722,21.9152393536,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>3</name>
-      <styleUrl>#point23</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3790396704,21.9165306450,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>3-A</name>
-      <styleUrl>#point24</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3812665372,21.9185492293,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>3-B</name>
-      <styleUrl>#point25</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3839128082,21.9213093831,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>2-A</name>
-      <styleUrl>#point26</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3776712005,21.9160784466,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>11</name>
-      <styleUrl>#point27</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3871252712,21.9212253795,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>12</name>
-      <styleUrl>#point28</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3872376877,21.9244358079,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>13</name>
-      <styleUrl>#point29</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3871936510,21.9279489574,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>14</name>
-      <styleUrl>#point30</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3871119183,21.9312663594,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>15</name>
-      <styleUrl>#point31</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3871083181,21.9328329313,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>16</name>
-      <styleUrl>#point32</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3870387309,21.9352248297,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>16-A</name>
-      <styleUrl>#point33</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3882574122,21.9412929627,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>16-B</name>
-      <styleUrl>#point34</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3895107718,21.9481763052,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>16-C</name>
-      <styleUrl>#point35</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3914069688,21.9534965799,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>16-D</name>
-      <styleUrl>#point36</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3933692087,21.9592932326,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>16 
--E</name>
-      <styleUrl>#point37</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3863852748,21.9593063173,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>16-F</name>
-      <styleUrl>#point38</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3817847567,21.9588896834,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>16-F/1</name>
-      <styleUrl>#point39</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3790002086,21.9589218699,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>16-G</name>
-      <styleUrl>#point40</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3768913925,21.9589097530,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>16-
-G/1</name>
-      <styleUrl>#point41</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3752075735,21.9588761424,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>48</name>
-      <styleUrl>#point42</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3729425767,21.9588026321,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>49</name>
-      <styleUrl>#point43</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3712806026,21.9573250462,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>50-A</name>
-      <styleUrl>#point44</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3676793436,21.9542210991,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>51</name>
-      <styleUrl>#point45</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3675023456,21.9535387930,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>51-A</name>
-      <styleUrl>#point46</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3650430084,21.9536914009,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>52</name>
-      <styleUrl>#point47</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3636509596,21.9539133729,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>54</name>
-      <styleUrl>#point48</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3572397946,21.9504508496,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>52-A</name>
-      <styleUrl>#point49</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3618837539,21.9532970532,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>56</name>
-      <styleUrl>#point50</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3514823107,21.9499134108,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>57</name>
-      <styleUrl>#point51</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3498269802,21.9505820016,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>59</name>
-      <styleUrl>#point52</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3488217233,21.9490002744,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>60</name>
-      <styleUrl>#point53</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3479618590,21.9473341912,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>61</name>
-      <styleUrl>#point54</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3476835223,21.9464464144,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>53</name>
-      <styleUrl>#point55</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3591483579,21.9516351524,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>62</name>
-      <styleUrl>#point56</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3485642239,21.9455733411,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>62-A</name>
-      <styleUrl>#point57</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3497068694,21.9438680006,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>63</name>
-      <styleUrl>#point58</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3508952045,21.9425746762,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>64</name>
-      <styleUrl>#point59</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3521083088,21.9420539549,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>65</name>
-      <styleUrl>#point60</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3547029679,21.9415544651,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>66</name>
-      <styleUrl>#point61</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3561036460,21.9412946366,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>67</name>
-      <styleUrl>#point62</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3580718428,21.9413566618,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>68</name>
-      <styleUrl>#point63</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3594619177,21.9414525127,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>69</name>
-      <styleUrl>#point64</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3605395322,21.9416048465,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>70</name>
-      <styleUrl>#point65</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3616186862,21.9416230619,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>72</name>
-      <styleUrl>#point66</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3637290106,21.9423594334,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>73</name>
-      <styleUrl>#point67</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3643198628,21.9427612825,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>74</name>
-      <styleUrl>#point68</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3653399150,21.9430545907,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>75</name>
-      <styleUrl>#point69</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3659955462,21.9430536608,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>77</name>
-      <styleUrl>#point70</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3692793035,21.9418567877,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>78</name>
-      <styleUrl>#point71</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3720361222,21.9395409791,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>79</name>
-      <styleUrl>#point72</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3732235643,21.9378974882,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>80</name>
-      <styleUrl>#point73</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3736072852,21.9373159158,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>81</name>
-      <styleUrl>#point74</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3742951004,21.9367745614,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>82</name>
-      <styleUrl>#point75</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3755407763,21.9361387500,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>83</name>
-      <styleUrl>#point76</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3757287000,21.9344414765,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>84</name>
-      <styleUrl>#point77</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3761383503,21.9318665055,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>85</name>
-      <styleUrl>#point78</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3762812981,21.9292080797,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>86</name>
-      <styleUrl>#point79</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3763574790,21.9282742887,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>87</name>
-      <styleUrl>#point80</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3761746077,21.9277565041,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>88</name>
-      <styleUrl>#point81</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3757493066,21.9264203381,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>89</name>
-      <styleUrl>#point82</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3755731023,21.9255531208,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>90</name>
-      <styleUrl>#point83</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3757251945,21.9248884436,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>91</name>
-      <styleUrl>#point84</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3758987408,21.9244560183,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>92</name>
-      <styleUrl>#point85</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3761854922,21.9234860948,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>96</name>
-      <styleUrl>#point86</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3725311728,21.9175120833,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>97</name>
-      <styleUrl>#point87</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3725121782,21.9169634014,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>98</name>
-      <styleUrl>#point88</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3726154294,21.9164219145,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>99</name>
-      <styleUrl>#point89</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3727021450,21.9161311727,-1350</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>71</name>
-      <styleUrl>#point90</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3630345232,21.9422057436,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>76</name>
-      <styleUrl>#point91</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3686141760,21.9420835656,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>93</name>
-      <styleUrl>#point92</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3753409161,21.9222749967,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>94</name>
-      <styleUrl>#point93</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3740457298,21.9205897254,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>95</name>
-      <styleUrl>#point94</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3730536106,21.9192890769,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>50</name>
-      <styleUrl>#point95</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3698907869,21.9569724049,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>55</name>
-      <styleUrl>#point96</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3543569354,21.9501520322,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <description>Lease pillar</description>
-      <name>58</name>
-      <styleUrl>#point97</styleUrl>
-      <Point>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <coordinates>85.3489939938,21.9496581711,0</coordinates>
       </Point>
     </Placemark>
   </Folder>
@@ -1431,9 +327,6 @@ G/1</name>
       <description>0</description>
       <styleUrl>#area1</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -1451,9 +344,6 @@ G/1</name>
       <description>0</description>
       <styleUrl>#area2</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -1526,9 +416,6 @@ G/1</name>
       <description>0</description>
       <styleUrl>#area3</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -1721,9 +608,6 @@ G/1</name>
       <description>0</description>
       <styleUrl>#area2</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -1796,9 +680,6 @@ G/1</name>
       <description>0</description>
       <styleUrl>#area3</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -1991,9 +872,6 @@ G/1</name>
       <description>0</description>
       <styleUrl>#area2</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -2066,9 +944,6 @@ G/1</name>
       <description>0</description>
       <styleUrl>#area3</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -2261,9 +1136,6 @@ G/1</name>
       <description>0</description>
       <styleUrl>#area1</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -2281,9 +1153,6 @@ G/1</name>
       <description>0</description>
       <styleUrl>#area2</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -2356,9 +1225,6 @@ G/1</name>
       <description>0</description>
       <styleUrl>#area3</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -2551,9 +1417,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -2746,9 +1609,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -2941,9 +1801,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -3136,9 +1993,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -3331,9 +2185,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -3526,9 +2377,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -3721,9 +2569,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -3916,9 +2761,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -4111,9 +2953,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -4306,9 +3145,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -4501,9 +3337,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -4696,9 +3529,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -4891,9 +3721,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -5086,9 +3913,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -5281,9 +4105,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -5476,9 +4297,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -5671,9 +4489,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -5866,9 +4681,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -6061,9 +4873,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -6256,9 +5065,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -6451,9 +5257,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -6646,9 +5449,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -6841,9 +5641,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -7036,9 +5833,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -7231,9 +6025,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -7426,9 +6217,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -7621,9 +6409,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -7816,9 +6601,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -8011,9 +6793,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -8206,9 +6985,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -8401,9 +7177,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -8596,9 +7369,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -8791,9 +7561,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -8986,9 +7753,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -9181,9 +7945,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -9376,9 +8137,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -9571,9 +8329,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -9766,9 +8521,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -9961,9 +8713,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -10156,9 +8905,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -10351,9 +9097,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -10546,9 +9289,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -10741,9 +9481,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -10936,9 +9673,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -11131,9 +9865,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -11326,9 +10057,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -11521,9 +10249,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -11716,9 +10441,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -11911,9 +10633,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -12106,9 +10825,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -12301,9 +11017,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -12496,9 +11209,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -12691,9 +11401,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -12886,9 +11593,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -13081,9 +11785,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -13276,9 +11977,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -13471,9 +12169,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -13666,9 +12361,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -13861,9 +12553,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -14056,9 +12745,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -14251,9 +12937,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -14446,9 +13129,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -14641,9 +13321,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -14836,9 +13513,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -15031,9 +13705,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -15226,9 +13897,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -15421,9 +14089,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -15616,9 +14281,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -15811,9 +14473,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -16006,9 +14665,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -16201,9 +14857,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -16396,9 +15049,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -16591,9 +15241,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -16786,9 +15433,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -16981,9 +15625,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -17176,9 +15817,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -17371,9 +16009,6 @@ G/1</name>
       <description>Lease pillar</description>
       <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -17564,11 +16199,8 @@ G/1</name>
     </Placemark>
     <Placemark>
       <description>Lease Boundary</description>
-      <styleUrl>#area5</styleUrl>
+      <styleUrl>#area4</styleUrl>
       <Polygon>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <outerBoundaryIs>
           <LinearRing>
             <coordinates>
@@ -17663,9 +16295,6 @@ G/1</name>
       <description>0</description>
       <styleUrl>#line1</styleUrl>
       <LineString>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <coordinates>
           85.3800995525,21.9359480219,0
           85.3801277521,21.9360923703,0
@@ -17740,9 +16369,6 @@ G/1</name>
       <description>0</description>
       <styleUrl>#line1</styleUrl>
       <LineString>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <coordinates>
           85.3898866174,21.9525736370,0
           85.3900413043,21.9529321420,0
@@ -17794,9 +16420,6 @@ G/1</name>
       <description>0</description>
       <styleUrl>#line1</styleUrl>
       <LineString>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <coordinates>
           85.3769751346,21.9216224848,0
           85.3771101696,21.9218881973,0
@@ -17859,9 +16482,6 @@ G/1</name>
       <description>0</description>
       <styleUrl>#line1</styleUrl>
       <LineString>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <coordinates>
           85.3823736847,21.9297089165,0
           85.3822613259,21.9298399055,0
@@ -17892,9 +16512,6 @@ G/1</name>
       <description>0</description>
       <styleUrl>#line1</styleUrl>
       <LineString>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <coordinates>
           85.3796625603,21.9319641016,0
           85.3796555130,21.9317788574,0
@@ -17923,9 +16540,6 @@ G/1</name>
       <description>0</description>
       <styleUrl>#line1</styleUrl>
       <LineString>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <coordinates>
           85.3796625603,21.9319641016,0
           85.3796736134,21.9321062231,0
@@ -17962,9 +16576,6 @@ G/1</name>
       <description>0</description>
       <styleUrl>#line1</styleUrl>
       <LineString>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <coordinates>
           85.3834628094,21.9393816045,0
           85.3838954019,21.9393828051,0
@@ -18045,9 +16656,6 @@ G/1</name>
       <description>0</description>
       <styleUrl>#line1</styleUrl>
       <LineString>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <coordinates>
           85.3877865175,21.9498817117,0
           85.3885266542,21.9505463038,0
@@ -18061,9 +16669,6 @@ G/1</name>
       <description>0</description>
       <styleUrl>#line1</styleUrl>
       <LineString>
-        <altitudeMode>clampToGround</altitudeMode>
-        <extrude>0</extrude>
-        <tessellate>1</tessellate>
         <coordinates>
           85.3853915334,21.9473135702,0
           85.3854999829,21.9473174103,0
