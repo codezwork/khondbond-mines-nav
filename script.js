@@ -187,222 +187,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// --- PDF Viewer Logic ---
+// --- Static Info Modal Logic ---
 
-// Path to your PDF file (Relative path recommended)
-const url = 'KIMM.pdf'; 
+document.addEventListener('DOMContentLoaded', function() {
+    const infoBtn = document.getElementById('infoBtn');
+    const infoModal = document.getElementById('infoModal');
+    const infoModalClose = document.getElementById('infoModalClose');
 
-let pdfDoc = null,
-    pageNum = 1,
-    pageRendering = false,
-    pageNumPending = null,
-    scale = 1.0, // Initial Zoom level (100%)
-    canvas = document.getElementById('the-canvas'),
-    ctx = canvas.getContext('2d');
-
-/**
- * Get page info from document, resize canvas accordingly, and render page.
- * @param num Page number.
- */
-function renderPage(num) {
-  pageRendering = true;
-  
-  // Fetch page
-  pdfDoc.getPage(num).then(function(page) {
-    const viewport = page.getViewport({scale: scale});
-    canvas.height = viewport.height;
-    canvas.width = viewport.width;
-
-    // Render PDF page into canvas context
-    const renderContext = {
-      canvasContext: ctx,
-      viewport: viewport
-    };
-    const renderTask = page.render(renderContext);
-
-    // Wait for render to finish
-    renderTask.promise.then(function() {
-      pageRendering = false;
-      if (pageNumPending !== null) {
-        // New page rendering is pending
-        renderPage(pageNumPending);
-        pageNumPending = null;
-      }
-    });
-  });
-
-  // Update page counters
-  document.getElementById('page_num').textContent = num;
-  
-  // Update zoom percentage text
-  document.getElementById('zoomLevel').textContent = Math.round(scale * 100) + "%";
-}
-
-/**
- * If another page rendering in progress, waits until the rendering is
- * finised. Otherwise, executes rendering immediately.
- */
-function queueRenderPage(num) {
-  if (pageRendering) {
-    pageNumPending = num;
-  } else {
-    renderPage(num);
-  }
-}
-
-/**
- * Displays previous page.
- */
-function onPrevPage() {
-  if (pageNum <= 1) {
-    return;
-  }
-  pageNum--;
-  queueRenderPage(pageNum);
-}
-
-/**
- * Displays next page.
- */
-function onNextPage() {
-  if (pageNum >= pdfDoc.numPages) {
-    return;
-  }
-  pageNum++;
-  queueRenderPage(pageNum);
-}
-
-/**
- * Handles Zoom In
- */
-function onZoomIn() {
-    scale += 0.2; // Increase zoom by 20%
-    queueRenderPage(pageNum);
-}
-
-/**
- * Handles Zoom Out
- */
-function onZoomOut() {
-    if (scale <= 0.4) return; // Prevent zooming out too much
-    scale -= 0.2; // Decrease zoom by 20%
-    queueRenderPage(pageNum);
-}
-
-// --- Updated Event Listeners & Init Logic (Replace end of script.js) ---
-
-// Button Events for Navigation
-document.getElementById('pdfPrev').addEventListener('click', onPrevPage);
-document.getElementById('pdfNext').addEventListener('click', onNextPage);
-document.getElementById('pdfZoomIn').addEventListener('click', onZoomIn);
-document.getElementById('pdfZoomOut').addEventListener('click', onZoomOut);
-
-// NEW: Close Button Logic
-const closeBtn = document.getElementById('pdfModalClose');
-if (closeBtn) {
-    closeBtn.addEventListener('click', function() {
-        document.getElementById('pdfModal').style.display = 'none';
-    });
-}
-
-// NEW: Close when clicking outside the white box (overlay background)
-window.addEventListener('click', function(event) {
-    const modal = document.getElementById('pdfModal');
-    if (event.target == modal) {
-        modal.style.display = "none";
+    // Open Modal
+    if (infoBtn && infoModal) {
+        infoBtn.addEventListener('click', function() {
+            infoModal.style.display = 'flex';
+        });
     }
+
+    // Close Modal via Button
+    if (infoModalClose) {
+        infoModalClose.addEventListener('click', function() {
+            infoModal.style.display = 'none';
+        });
+    }
+
+    // Close Modal by clicking outside the content
+    window.addEventListener('click', function(event) {
+        if (event.target === infoModal) {
+            infoModal.style.display = 'none';
+        }
+    });
 });
-
-// Updated Initialization with Auto-Fit Zoom
-function initPdfViewer() {
-    // Show modal first so we can calculate width correctly
-    const modal = document.getElementById('pdfModal');
-    modal.style.display = 'flex'; // Changed from 'block' to 'flex' for centering
-
-    if(pdfDoc === null) { 
-        pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
-            pdfDoc = pdfDoc_;
-            document.getElementById('page_count').textContent = pdfDoc.numPages;
-            
-            // --- AUTO-ZOOM FIX ---
-            // Fetch first page *just to calculate scale*, then render.
-            pdfDoc.getPage(1).then(function(page) {
-                const container = document.getElementById('pdfCanvasContainer');
-                
-                // Get available width (minus some padding)
-                const availableWidth = container.clientWidth - 40; 
-                const viewportUnscaled = page.getViewport({scale: 1});
-                
-                // Calculate scale to fit width exactly
-                const newScale = availableWidth / viewportUnscaled.width;
-                
-                // Apply the new scale (limit it to reasonable max/min if needed)
-                scale = Math.min(Math.max(newScale, 0.5), 1.5); 
-                
-                // Render the page with the calculated scale
-                renderPage(pageNum);
-            });
-
-        }).catch(function(error) {
-            console.error('Error loading PDF:', error);
-            document.getElementById('pdfCanvasContainer').innerHTML = 
-                '<p style="text-align:center; color: white; margin-top: 20px;">PDF could not be loaded.</p>';
-        });
-    } else {
-        // If already loaded, just ensure it renders
-        renderPage(pageNum);
-    }
-}
-
-// Trigger Logic
-const infoBtn = document.getElementById('infoBtn');
-if(infoBtn) {
-    infoBtn.addEventListener('click', function() {
-        initPdfViewer();
-    });
-}
-
-// --- PRELOAD LOGIC ---
-// Start fetching the PDF as soon as the script loads, 
-// but don't render it yet.
-
-let pdfLoadingTask = null; // Store the loading task globally
-
-// Check if we are on the main page
-if (document.getElementById('infoBtn')) {
-    // Start download immediately in background
-    pdfLoadingTask = pdfjsLib.getDocument(url);
-}
-
-// Update your initPdfViewer to use this existing task
-function initPdfViewer() {
-    const modal = document.getElementById('pdfModal');
-    const loader = document.getElementById('pdf-loader');
-    
-    modal.style.display = 'flex';
-    loader.style.display = 'block';
-
-    // Check if the preloading task exists
-    if (pdfLoadingTask) {
-        pdfLoadingTask.promise.then(function(pdfDoc_) {
-            // ... exact same logic as before ...
-            pdfDoc = pdfDoc_;
-            document.getElementById('page_count').textContent = pdfDoc.numPages;
-            
-            pdfDoc.getPage(1).then(function(page) {
-                const container = document.getElementById('pdfCanvasContainer');
-                const availableWidth = container.clientWidth - 40;
-                const viewportUnscaled = page.getViewport({scale: 1});
-                const newScale = availableWidth / viewportUnscaled.width;
-                scale = Math.min(Math.max(newScale, 0.5), 1.5);
-                
-                renderPage(pageNum).then(() => {
-                    loader.style.display = 'none';
-                });
-            });
-        }).catch(function(error) {
-             console.error('Error loading PDF:', error);
-             loader.innerHTML = '<p>Error loading PDF</p>';
-        });
-    }
-}
