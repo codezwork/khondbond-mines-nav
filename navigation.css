@@ -1400,3 +1400,55 @@ body.full-viewport-map header {
         padding: var(--space-16);
     }
 }
+
+/* ============================================
+   NAVIGATION BANNER UI
+   ============================================ */
+.nav-banner {
+    position: fixed;
+    top: 80px; /* Below the header */
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-surface);
+    border: 2px solid var(--color-primary);
+    border-radius: var(--radius-full);
+    padding: var(--space-8) var(--space-16);
+    display: flex;
+    align-items: center;
+    gap: var(--space-16);
+    z-index: 1002;
+    box-shadow: var(--shadow-lg);
+    transition: all 0.3s ease;
+}
+
+.nav-banner.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -20px);
+}
+
+.nav-banner-content {
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
+}
+
+.nav-pulse {
+    width: 12px;
+    height: 12px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    animation: pulse 1s infinite;
+}
+
+.stop-nav-btn {
+    background: var(--color-error);
+    color: white;
+    border: none;
+    padding: var(--space-6) var(--space-12);
+    border-radius: var(--radius-full);
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+}
