@@ -1503,45 +1503,32 @@ body.full-viewport-map header {
 /* --- MOBILE OPTIMIZATIONS FOR BANNERS --- */
 @media (max-width: 768px) {
     .nav-banner {
-        top: auto; 
-        
-        /* THE FIX: Anchors dynamically to the bottom, respecting device safe areas */
-        bottom: max(24px, env(safe-area-inset-bottom) + 140px);
-        
-        left: var(--space-12); 
-        transform: none; 
-        
-        /* Keeps the notch on the right so it doesn't overlap the FABs */
-        width: calc(100vw - 86px); 
+        top: 70px; /* Clears the mobile search bar cleanly */
+        left: calc(100vw - 150px);
+        width: calc(100vw - 150px); /* Gives 16px breathing room on the edges */
         max-width: 400px;
-        border-radius: var(--radius-lg); 
+        border-radius: var(--radius-lg); /* Changes from a distorted pill to a clean rounded card */
         padding: var(--space-12);
-        gap: var(--space-8); 
+        gap: var(--space-12);
         justify-content: space-between;
     }
 
-    /* Stack the error banner beautifully above the active nav banner */
     #gps-error-banner {
-        top: auto;
-        bottom: max(95px, env(safe-area-inset-bottom) + 140px); 
-    }
-
-    /* Fix the hide animation so it drops down cleanly off-screen */
-    .nav-banner.hidden {
-        transform: translateY(150%); 
+        top: 140px; /* Pushes the error cleanly below the active banner on mobile */
     }
 
     .nav-banner-content {
-        align-items: flex-start; 
+        align-items: flex-start; /* Aligns to top so icons don't float strangely if text wraps */
     }
 
     .nav-banner-content span {
         font-size: var(--font-size-sm);
         line-height: 1.4;
+        /* Text will now wrap naturally and elegantly */
     }
 
     .nav-banner-content svg, .nav-pulse {
-        margin-top: 3px; 
+        margin-top: 3px; /* Optically aligns the icon with the first line of wrapped text */
     }
 
     .stop-nav-btn {
