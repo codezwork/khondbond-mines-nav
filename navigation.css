@@ -1500,32 +1500,35 @@ body.full-viewport-map header {
 }
 
 /* --- MOBILE OPTIMIZATIONS FOR BANNERS --- */
+/* --- MOBILE OPTIMIZATIONS FOR BANNERS --- */
 @media (max-width: 768px) {
     .nav-banner {
-        top: auto; /* Kill the desktop top positioning */
-        bottom: 140px; /* Align vertically with your mobile FABs */
-        margin-bottom: 30px;
-        left: var(--space-12); /* Anchor to the left side */
-        transform: none; /* Kill the desktop center-alignment */
+        top: auto; 
         
-        /* 100vw minus left padding (12px) minus right padding (12px) minus FAB width (~52px) minus gap */
+        /* THE FIX: Anchors dynamically to the bottom, respecting device safe areas */
+        bottom: max(24px, env(safe-area-inset-bottom) + 140px);
+        
+        left: var(--space-12); 
+        transform: none; 
+        
+        /* Keeps the notch on the right so it doesn't overlap the FABs */
         width: calc(100vw - 86px); 
         max-width: 400px;
         border-radius: var(--radius-lg); 
         padding: var(--space-12);
-        gap: var(--space-8); /* Slightly tighter gap for mobile */
+        gap: var(--space-8); 
         justify-content: space-between;
     }
 
-    /* Stack the error banner above the active nav banner if both are open */
+    /* Stack the error banner beautifully above the active nav banner */
     #gps-error-banner {
         top: auto;
-        margin-bottom: 30px;
+        bottom: max(95px, env(safe-area-inset-bottom) + 140px); 
     }
 
-    /* IMPORTANT: Fix the hide animation so it drops down instead of flying to the center */
+    /* Fix the hide animation so it drops down cleanly off-screen */
     .nav-banner.hidden {
-        transform: translateY(20px); /* Drops down slightly instead of sliding up */
+        transform: translateY(150%); 
     }
 
     .nav-banner-content {
