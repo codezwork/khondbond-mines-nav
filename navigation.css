@@ -1504,6 +1504,7 @@ body.full-viewport-map header {
     .nav-banner {
         top: auto; /* Kill the desktop top positioning */
         bottom: 140px; /* Align vertically with your mobile FABs */
+        margin-bottom: 30px;
         left: var(--space-12); /* Anchor to the left side */
         transform: none; /* Kill the desktop center-alignment */
         
@@ -1519,7 +1520,7 @@ body.full-viewport-map header {
     /* Stack the error banner above the active nav banner if both are open */
     #gps-error-banner {
         top: auto;
-        bottom: 140px; 
+        margin-bottom: 30px;
     }
 
     /* IMPORTANT: Fix the hide animation so it drops down instead of flying to the center */
