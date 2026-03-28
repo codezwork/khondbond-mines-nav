@@ -29,12 +29,26 @@ function initNavigationUI() {
             }
         });
     }
+    // NEW: Allow users to dismiss the GPS error banner
+    const dismissGpsBtn = document.getElementById('dismiss-gps-error');
+    if (dismissGpsBtn) {
+        dismissGpsBtn.addEventListener('click', () => {
+            document.getElementById('gps-error-banner').classList.add('hidden');
+        });
+    }
 }
 
 function initFABs() {
     const locationFab = document.getElementById('location-fab');
     if (locationFab) {
         locationFab.addEventListener('click', function() {
+            // If GPS is currently in an error state, tell them why when they click
+            const dot = document.getElementById('gps-status-dot');
+            if (dot && dot.classList.contains('status-error')) {
+                showGpsErrorBanner("Location unavailable. Please check your device settings.");
+                return;
+            }
+            
             // Re-engage auto-centering if they panned away
             if (window.navState) {
                 window.navState.isAutoCentering = true;

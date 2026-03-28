@@ -279,6 +279,34 @@ body.full-viewport-map header {
     border: 1px solid var(--color-border);
 }
 
+/* ============================================
+   GPS STATUS INDICATOR
+   ============================================ */
+.gps-status-indicator {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid var(--color-surface); /* Creates a cutout effect */
+    transition: background-color 0.3s ease;
+    z-index: 2;
+}
+
+.status-searching {
+    background-color: var(--color-warning);
+    animation: pulse 1.5s infinite;
+}
+
+.status-active {
+    background-color: var(--color-success);
+}
+
+.status-error {
+    background-color: var(--color-error);
+}
+
 
 /* ============================================
    LAYERS PANEL MODAL

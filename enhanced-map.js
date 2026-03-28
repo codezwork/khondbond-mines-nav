@@ -283,14 +283,21 @@ function setupNavigationLayers() {
     });
 }
 
+// --- REPLACE EXISTING startGPSWatch ---
 function startGPSWatch() {
     if ("geolocation" in navigator) {
+        updateGpsStatus('searching'); // Set initial dot to yellow/pulsing
+
         watchId = navigator.geolocation.watchPosition(position => {
             const lng = position.coords.longitude;
             const lat = position.coords.latitude;
             window.navState.userLocation = [lng, lat];
 
             updateUserMarker(lng, lat);
+            
+            // Success! Update UI
+            updateGpsStatus('active'); 
+            hideGpsErrorBanner(); 
 
             if (window.navState.isActive && window.navState.destination) {
                 calculateTurfRoute();
@@ -300,10 +307,18 @@ function startGPSWatch() {
                 mineMap.flyTo({ center: [lng, lat], speed: 0.5 });
             }
 
-        }, err => console.error("GPS Error:", err), {
+        }, err => {
+            console.error("GPS Error:", err);
+            updateGpsStatus('error'); // Set dot to red
+            handleGpsError(err);      // Trigger the banner
+        }, {
             enableHighAccuracy: true,
-            maximumAge: 0 
+            maximumAge: 0,
+            timeout: 10000 // NEW: 10 second timeout forces the error handler to run if GPS is off
         });
+    } else {
+        updateGpsStatus('error');
+        showGpsErrorBanner("Geolocation is not supported by your browser.");
     }
 }
 
@@ -369,18 +384,32 @@ function calculateTurfRoute() {
     }
 }
 
+// --- REPLACE EXISTING startNavigation ---
 window.startNavigation = function(lat, lng) {
     window.navState.isActive = true;
-    window.navState.isAutoCentering = true;
     window.navState.destination = [lng, lat]; 
 
     document.getElementById('nav-active-banner').classList.remove('hidden');
 
     if (window.navState.userLocation) {
+        window.navState.isAutoCentering = true;
         calculateTurfRoute();
         mineMap.flyTo({ center: window.navState.userLocation, zoom: 16, pitch: 45 });
     } else {
-        alert("Waiting for GPS signal...");
+        // THE MANUAL FALLBACK: No GPS signal yet
+        showGpsErrorBanner("GPS unavailable. Tap anywhere on the map to set your starting point.");
+        
+        // Listen for a ONE-TIME click on the map to manually set their start location
+        mineMap.once('click', (e) => {
+            // Only use the click if real GPS hasn't kicked in yet
+            if (!window.navState.userLocation) {
+                window.navState.userLocation = [e.lngLat.lng, e.lngLat.lat];
+                updateUserMarker(e.lngLat.lng, e.lngLat.lat);
+                calculateTurfRoute();
+                mineMap.flyTo({ center: window.navState.userLocation, zoom: 16, pitch: 45 });
+                hideGpsErrorBanner();
+            }
+        });
     }
 }
 
@@ -391,4 +420,57 @@ window.stopNavigation = function() {
     
     mineMap.getSource('active-route').setData({ type: 'FeatureCollection', features: [] });
     mineMap.flyTo({ pitch: 0 }); 
+}
+
+// --- ADD NEW UI HELPER FUNCTIONS (At bottom of file) ---
+function updateGpsStatus(state) {
+    const dot = document.getElementById('gps-status-dot');
+    if (!dot) return;
+    
+    // Clear old states, apply new one
+    dot.classList.remove('status-searching', 'status-active', 'status-error');
+    dot.classList.add(`status-${state}`);
+}
+
+function handleGpsError(err) {
+    let message = "Unable to find your location.";
+    
+    switch(err.code) {
+        case 1: // PERMISSION_DENIED
+            message = "Location access denied. Please enable it in browser settings.";
+            break;
+        case 2: // POSITION_UNAVAILABLE
+            message = "GPS signal lost. Please check device location services.";
+            break;
+        case 3: // TIMEOUT
+            message = "Searching for GPS signal... Ensure clear view of the sky.";
+            break;
+    }
+
+    // THE FIX: Prevent spamming the user while they are just browsing
+    // Only show the banner if they are actively trying to navigate
+    if (window.navState.isActive) {
+        const msgEl = document.getElementById('gps-error-message');
+        
+        // Prevent overwriting the "Tap anywhere" manual fallback message
+        if (msgEl && !msgEl.textContent.includes("Tap anywhere")) {
+            showGpsErrorBanner(message);
+        }
+    }
+}
+
+function showGpsErrorBanner(message) {
+    const banner = document.getElementById('gps-error-banner');
+    const msgEl = document.getElementById('gps-error-message');
+    if (banner && msgEl) {
+        msgEl.textContent = message;
+        banner.classList.remove('hidden');
+    }
+}
+
+function hideGpsErrorBanner() {
+    const banner = document.getElementById('gps-error-banner');
+    if (banner) {
+        banner.classList.add('hidden');
+    }
 }
