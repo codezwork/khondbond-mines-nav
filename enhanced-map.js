@@ -175,7 +175,7 @@ function loadAndParseKML(kmlUrl) {
                 paint: {
                     'circle-color': '#ff0000', 
                     'circle-radius': 4,
-                    'circle-opacity': 0.5
+                    'circle-opacity': 0
                 }
             });
 
