@@ -1502,31 +1502,42 @@ body.full-viewport-map header {
 /* --- MOBILE OPTIMIZATIONS FOR BANNERS --- */
 @media (max-width: 768px) {
     .nav-banner {
-        top: 130px; /* Clears the mobile search bar cleanly */
-        width: calc(100vw - 150px); /* Gives 16px breathing room on the edges */
+        top: auto; /* Kill the desktop top positioning */
+        bottom: 140px; /* Align vertically with your mobile FABs */
+        left: var(--space-12); /* Anchor to the left side */
+        transform: none; /* Kill the desktop center-alignment */
+        
+        /* 100vw minus left padding (12px) minus right padding (12px) minus FAB width (~52px) minus gap */
+        width: calc(100vw - 86px); 
         max-width: 400px;
-        border-radius: var(--radius-lg); /* Changes from a distorted pill to a clean rounded card */
+        border-radius: var(--radius-lg); 
         padding: var(--space-12);
-        gap: var(--space-12);
+        gap: var(--space-8); /* Slightly tighter gap for mobile */
         justify-content: space-between;
     }
 
+    /* Stack the error banner above the active nav banner if both are open */
     #gps-error-banner {
-        top: 210px; /* Pushes the error cleanly below the active banner on mobile */
+        top: auto;
+        bottom: 140px; 
+    }
+
+    /* IMPORTANT: Fix the hide animation so it drops down instead of flying to the center */
+    .nav-banner.hidden {
+        transform: translateY(20px); /* Drops down slightly instead of sliding up */
     }
 
     .nav-banner-content {
-        align-items: flex-start; /* Aligns to top so icons don't float strangely if text wraps */
+        align-items: flex-start; 
     }
 
     .nav-banner-content span {
         font-size: var(--font-size-sm);
         line-height: 1.4;
-        /* Text will now wrap naturally and elegantly */
     }
 
     .nav-banner-content svg, .nav-pulse {
-        margin-top: 3px; /* Optically aligns the icon with the first line of wrapped text */
+        margin-top: 3px; 
     }
 
     .stop-nav-btn {
