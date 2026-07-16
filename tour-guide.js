@@ -10,10 +10,39 @@ document.addEventListener('DOMContentLoaded', function() {
         // Remove any previous tour completion flag
         localStorage.removeItem('tourCompleted');
         
-        // Wait for page to fully load
-        setTimeout(() => {
-            startTour();
-        }, 1500);
+        const infoModal = document.getElementById('infoModal');
+        const infoModalClose = document.getElementById('infoModalClose');
+        
+        if (infoModal) {
+            // 1. Show the safety overview modal automatically on load
+            infoModal.style.display = 'flex';
+            
+            // 2. Wait for the user to close it before starting the tour
+            const startTourOnce = () => {
+                setTimeout(() => {
+                    startTour();
+                }, 500); // Short delay for smooth transition
+                
+                // Clean up listeners so tour doesn't restart if they open modal again later
+                if (infoModalClose) infoModalClose.removeEventListener('click', startTourOnce);
+                window.removeEventListener('click', windowClickTourHandler);
+            };
+            
+            const windowClickTourHandler = (event) => {
+                if (event.target === infoModal) {
+                    startTourOnce();
+                }
+            };
+            
+            if (infoModalClose) infoModalClose.addEventListener('click', startTourOnce);
+            window.addEventListener('click', windowClickTourHandler);
+            
+        } else {
+            // Fallback if modal is missing
+            setTimeout(() => {
+                startTour();
+            }, 1500);
+        }
     }
 });
 

@@ -99,7 +99,11 @@ function loadAndParseKML(kmlUrl) {
                 }
                 // 6. Generic Points (Like the inside markers labeled "0")
                 else if (geomType === 'Point') {
-                    f.properties._customStyle = 'generic_point';
+                    if (name === '0' || name === '') {
+                        f.properties._customStyle = 'hidden_point';
+                    } else {
+                        f.properties._customStyle = 'named_point';
+                    }
                 }
                 // 7. Other Lines
                 else if (geomType.includes('LineString')) {
@@ -166,16 +170,31 @@ function loadAndParseKML(kmlUrl) {
                 }
             });
 
-            // E. Generic Points (The "0" markers - Small Blue Dots)
+            // E. Hidden Points (The "0" markers)
             mineMap.addLayer({
-                id: 'kml-generic-points',
+                id: 'kml-hidden-points',
                 type: 'circle',
                 source: 'kml-data',
-                filter: ['==', ['get', '_customStyle'], 'generic_point'],
+                filter: ['==', ['get', '_customStyle'], 'hidden_point'],
                 paint: {
                     'circle-color': '#ff0000', 
                     'circle-radius': 4,
                     'circle-opacity': 0
+                }
+            });
+
+            // E2. Named Points (Markers with actual names like the new added ones)
+            mineMap.addLayer({
+                id: 'kml-named-points',
+                type: 'circle',
+                source: 'kml-data',
+                filter: ['==', ['get', '_customStyle'], 'named_point'],
+                paint: {
+                    'circle-color': 'rgba(0,0,0,0)', // Cyan to stand out
+                    'circle-radius': 6,
+                    'circle-opacity': 0.8,
+                    'circle-stroke-width': 0,
+                    'circle-stroke-color': '#000000'
                 }
             });
 
@@ -189,7 +208,7 @@ function loadAndParseKML(kmlUrl) {
                     'text-field': '▲', 
                     'text-size': 22,
                     'text-anchor': 'center',
-                    'text-allow-overlap': true, // FORCES the triangle to show even if text is nearby!
+                    'text-allow-overlap': false, // FORCES the triangle to show even if text is nearby!
                     'text-ignore-placement': true
                 },
                 paint: {
@@ -211,7 +230,9 @@ function loadAndParseKML(kmlUrl) {
                     'text-size': 12,
                     'text-anchor': 'top',
                     'text-offset': [0, 1], // Pushes the text label cleanly UNDER the red circles/yellow triangles
-                    'symbol-placement': 'point'
+                    'symbol-placement': 'point',
+                    'text-allow-overlap': true,
+                    'text-ignore-placement': true
                 },
                 paint: {
                     'text-color': '#ffffff',
@@ -221,7 +242,7 @@ function loadAndParseKML(kmlUrl) {
             });
 
             // Popups
-            mineMap.on('click', ['kml-polygons', 'kml-master-lmv', 'kml-pillars', 'kml-gates', 'kml-labels', 'kml-generic-points'], (e) => {
+            mineMap.on('click', ['kml-polygons', 'kml-master-lmv', 'kml-pillars', 'kml-gates', 'kml-labels', 'kml-named-points'], (e) => {
                 const feature = e.features[0];
                 if (!feature.properties.name && !feature.properties.description) return;
                 
@@ -242,7 +263,7 @@ function loadAndParseKML(kmlUrl) {
             });
 
             // Cursors
-            const interactiveLayers = ['kml-polygons', 'kml-master-lmv', 'kml-pillars', 'kml-gates', 'kml-generic-points'];
+            const interactiveLayers = ['kml-polygons', 'kml-master-lmv', 'kml-pillars', 'kml-gates', 'kml-named-points'];
             interactiveLayers.forEach(layer => {
                 mineMap.on('mouseenter', layer, () => mineMap.getCanvas().style.cursor = 'pointer');
                 mineMap.on('mouseleave', layer, () => mineMap.getCanvas().style.cursor = '');

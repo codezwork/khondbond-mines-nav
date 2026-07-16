@@ -561,6 +561,46 @@ COMPLEX</name>
 				<coordinates>85.3867664253,21.9421268834,0</coordinates>
 			</Point>
 		</Placemark>
+		<Placemark id="NEW_EQ_MAINT">
+			<name>Equipment Maintenance Shed</name>
+			<description>TEXT</description>
+			<styleUrl>#__managed_style_3EBB6261313E2B192038</styleUrl>
+			<Point>
+				<coordinates>85.3863664253,21.9410068834,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="NEW_LCSS2">
+			<name>LCSS2</name>
+			<description>TEXT</description>
+			<styleUrl>#__managed_style_3EBB6261313E2B192038</styleUrl>
+			<Point>
+				<coordinates>85.386510589,21.9431803801,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="NEW_LCSS1">
+			<name>LCSS1</name>
+			<description>TEXT</description>
+			<styleUrl>#__managed_style_3EBB6261313E2B192038</styleUrl>
+			<Point>
+				<coordinates>85.3861964253,21.9422268834,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="NEW_TLS_OFFICE">
+			<name>TLS Office</name>
+			<description>TEXT</description>
+			<styleUrl>#__managed_style_3EBB6261313E2B192038</styleUrl>
+			<Point>
+				<coordinates>85.388808416,21.9485580185,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="NEW_OUTSOURCE_PLANT">
+			<name>Outsource Plant</name>
+			<description>TEXT</description>
+			<styleUrl>#__managed_style_3EBB6261313E2B192038</styleUrl>
+			<Point>
+				<coordinates>85.3785095681,21.941297744,0</coordinates>
+			</Point>
+		</Placemark>
 		<Placemark id="5B0816441F00000B">
 			<name>SCREEN PLANT</name>
 			<description>TEXT</description>
